@@ -3,7 +3,7 @@ const express = require('express')
 var cors = require('cors')
 
 const app = express()
-const port = 5000
+const port = process.env.PORT || 5000
 
 //to able to hit api directly from the browser
 app.use(cors())
