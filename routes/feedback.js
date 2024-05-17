@@ -9,7 +9,7 @@ const { body, validationResult } = require('express-validator');
 router.post("/addFeedback", fetchuser, [
     body('name', 'enter a valid title').isLength({ min: 3 }),
     body('email', "enter a valid email").isEmail(),
-    body('feedback', 'feedback must be at lease 5 characters').isLength({ min: 5 }),
+    body('feedback', 'feedback must be at lease 5 characters').isLength({ min: 1 }),
     body('rating', 'rating must be at lease 1').isLength({ min: 1 })
 ],
     async (req, res) => {

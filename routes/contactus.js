@@ -9,7 +9,7 @@ const { body, validationResult } = require('express-validator');
 router.post("/addcontactus", fetchuser, [
     body('name', 'enter a valid title').isLength({ min: 3 }),
     body('email', "enter a valid email").isEmail(),
-    body('message', 'message must be at lease 5 characters').isLength({ min: 5 })
+    body('message', 'message must be at lease 5 characters').isLength({ min: 1 })
 ],
     async (req, res) => {
 
